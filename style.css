@@ -1,0 +1,124 @@
+html {
+    font-size: 10px;
+    font-family: "Inter", sans-serif;
+    background-color: #f8f9fa;
+}
+
+header h1 {
+    font-size: 55px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px 5px 0px;
+    color: #1a1a1a;
+}
+
+p.description {
+    text-align: center;
+    font-size: 16px
+}
+
+#digit-canvas {
+    background-color: #ffffff;
+    border: 1.5px solid #d0d7de;
+    border-radius: 6px;
+    cursor: crosshair;
+    display: block;
+    margin: 0 auto;
+    touch-action: none;
+
+}
+
+p.canvas-hint {
+    text-align: center;
+    font-size: 12px;
+}
+
+.controls {
+    display: flex;
+    gap: 30px;                  /* Space between two buttons */
+    width: 280px;               /* Same as canvas*/
+    margin: 16px auto 0 auto;   /*16px gap above, centered horizontaly*/
+}
+
+.controls button {
+  flex: 1;                      /* Makes both buttons split the width equally (50/50) */
+  padding: 9px 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.controls button.secondary {
+  background-color: #f6f8fa;
+  color: #24292f;
+  border: 1px solid #d0d7de;
+}
+
+.controls button.secondary:hover {
+  background-color: #f3f4f6;
+  border-color: #afb8c1;
+}
+
+.controls button.primary {
+  background-color: #0969da;
+  color: #ffffff;
+  border: 1px solid #0969da;
+}
+
+.controls button.primary:hover {
+  background-color: #085cc0;
+}
+
+.controls button:active {
+  transform: translateY(1px);
+}
+
+.chart-container {
+  width: 280px;
+  margin: 20px auto 0 auto;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.digit-label {
+  width: 18px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2328;
+  text-align: right;
+  user-select: none;
+}
+
+.bar-bg {
+  flex-grow: 1;
+  height: 18px;
+  background-color: #f0f2f5;
+  border-radius: 4px;
+  border: 1px solid #d0d7de;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #0969da;
+  border-radius: 4px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prob-label {
+  width: 46px;
+  font-size: 1.4rem;
+  color: #656d76;
+  text-align: right;
+  white-space: nowrap;
+  user-select: none;
+}

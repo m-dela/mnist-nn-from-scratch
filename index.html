@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digit Recognizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Handwritten Digit Recognizer</h1>
+      <p class="description">
+        A neural network built entirely from scratch. Draw a number (0-9) below to test the model.
+      </p>
+    </header>
+
+    <main>
+      <section class="canvas-card">
+        
+        <!-- Canvas dimensions: 280x280 (10x scaling of MNIST 28x28) -->
+        <canvas id="digit-canvas" width="280" height="280"></canvas>
+        <p class="canvas-hint">Draw a single digit in the center</p>
+
+        <div class="controls">
+          <button type="button" id="clear-btn" class="secondary">Clear</button>
+          <button type="button" id="predict-btn" class="primary">Predict</button>
+        </div>
+
+        <!-- Output Confidence Bars (0-9) -->
+        <div class="chart-container" id="chart-container">
+
+          <div class="bar-row" data-digit="0">
+            <span class="digit-label">0</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-0" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-0">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="1">
+            <span class="digit-label">1</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-1" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-1">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="2">
+            <span class="digit-label">2</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-2" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-2">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="3">
+            <span class="digit-label">3</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-3" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-3">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="4">
+            <span class="digit-label">4</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-4" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-4">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="5">
+            <span class="digit-label">5</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-5" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-5">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="6">
+            <span class="digit-label">6</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-6" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-6">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="7">
+            <span class="digit-label">7</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-7" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-7">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="8">
+            <span class="digit-label">8</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-8" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-8">0.0%</span>
+          </div>
+
+          <div class="bar-row" data-digit="9">
+            <span class="digit-label">9</span>
+            <div class="bar-bg"><div class="bar-fill" id="bar-9" style="width: 0%"></div></div>
+            <span class="prob-label" id="prob-9">0.0%</span>
+          </div>
+
+        </div>
+
+      </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
