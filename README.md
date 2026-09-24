@@ -25,6 +25,7 @@ This project implements a multi-layer perceptron (MLP) trained to classify handw
 **1. Training & Validation Loss**
 
 ![Loss Curve](assets/Loss%20over%20Time.png)
+
 Reached **97.97%** test accuracy in 10 epochs.
 
 **2. Error Analysis & Confusion Matrix**
